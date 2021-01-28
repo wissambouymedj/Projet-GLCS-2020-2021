@@ -22,6 +22,10 @@ int main( int argc, char* argv[] )
 	// Add a printer to screen to observe the simulation
 	ScreenPrinter printer;
 	simulation.observe( printer );
+	
+	//create  the file and save the data 
+	hdf5(config, MPI_Comm comm);
+	simulation.observe( hdf5);
 
 	// run the simulation
 	simulation.run();
